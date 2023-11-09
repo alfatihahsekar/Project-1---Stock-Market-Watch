@@ -1,0 +1,214 @@
+/*create table*/
+create table stock (
+id int(10) not null primary key, symbol varchar, name varchar, date datetime, price real);
+
+/*insert 5 stock */
+insert into stock (id,symbol, name, date, price)
+values 
+(1,'ABNB', 'Airbnb Inc', '11/07/2023 12:00:00', 121.66),
+(2,'ALGN', 'Align Technology Inc', '11/07/2023 12:00:00', 197.46),
+(3,'AMD', 'Advanced Micro Devices Inc', '11/07/2023 12:00:00', 113.52),
+(4,'CEG', 'Constellation Energy Corp', '11/07/2023 12:00:00', 118.94),
+(5,'AMZN', 'Amazon.com Inc', '11/07/2023 12:00:00', 142.73);
+
+/*insert all stock price the last week*/
+insert into stock (id,symbol, name, date, price)
+values 
+(6,'ABNB', 'Airbnb Inc', '11/07/2023 14:00:00', 120.96),
+(7,'ABNB', 'Airbnb Inc', '11/07/2023 16:00:00', 121.08),
+(8,'ABNB', 'Airbnb Inc', '11/06/2023 12:00:00', 119.29),
+(9,'ABNB', 'Airbnb Inc', '11/06/2023 14:03:00', 117.26),
+(10,'ABNB', 'Airbnb Inc', '11/06/2023 16:00:00', 118.17),
+(11,'ABNB', 'Airbnb Inc', '11/03/2023 12:00:00', 122.58),
+(12,'ABNB', 'Airbnb Inc', '11/03/2023 14:00:00', 122.12),
+(13,'ABNB', 'Airbnb Inc', '11/03/2023 16:00:00', 122.64),
+(14,'ABNB', 'Airbnb Inc', '11/02/2023 12:00:00', 116.50),
+(15,'ABNB', 'Airbnb Inc', '11/02/2023 14:00:00', 115.15),
+(16,'ABNB', 'Airbnb Inc', '11/02/2023 16:00:00', 115.50),
+(17,'ABNB', 'Airbnb Inc', '11/01/2023 12:00:00', 118.26),
+(18,'ABNB', 'Airbnb Inc', '11/01/2023 14:00:00', 117.35),
+(19,'ABNB', 'Airbnb Inc', '11/01/2023 16:00:00', 115.83),
+(20,'ABNB', 'Airbnb Inc', '10/31/2023 12:00:00', 116.80),
+(21,'ABNB', 'Airbnb Inc', '10/31/2023 14:00:00', 118.37),
+(22,'ABNB', 'Airbnb Inc', '10/31/2023 16:00:00', 118.32),
+(23,'ABNB', 'Airbnb Inc', '10/30/2023 12:00:00', 117.24),
+(24,'ABNB', 'Airbnb Inc', '10/30/2023 14:00:00', 116.76),
+(25,'ABNB', 'Airbnb Inc', '10/30/2023 16:00:00', 116.95),
+(26,'ALGN', 'Align Technology Inc', '11/07/2023 14:00:00', 197.86),
+(27,'ALGN', 'Align Technology Inc', '11/07/2023 16:00:00', 197.53),
+(28,'ALGN', 'Align Technology Inc', '11/06/2023 12:00:00', 197.39),
+(29,'ALGN', 'Align Technology Inc', '11/06/2023 14:00:00', 197.67),
+(30,'ALGN', 'Align Technology Inc', '11/06/2023 16:00:00', 197.79),
+(31,'ALGN', 'Align Technology Inc', '11/03/2023 12:00:00', 201.31),
+(32,'ALGN', 'Align Technology Inc', '11/03/2023 14:00:00', 199.57),
+(33,'ALGN', 'Align Technology Inc', '11/03/2023 16:00:00', 197.50),
+(34,'ALGN', 'Align Technology Inc', '11/02/2023 12:00:00', 189.70),
+(35,'ALGN', 'Align Technology Inc', '11/02/2023 14:00:00', 192.00),
+(36,'ALGN', 'Align Technology Inc', '11/02/2023 16:00:00', 192.24),
+(37,'ALGN', 'Align Technology Inc', '11/01/2023 12:00:00', 179.95),
+(38,'ALGN', 'Align Technology Inc', '11/01/2023 14:00:00', 180.32),
+(39,'ALGN', 'Align Technology Inc', '11/01/2023 16:00:00', 183.21),
+(40,'ALGN', 'Align Technology Inc', '10/31/2023 12:00:00', 185.42),
+(41,'ALGN', 'Align Technology Inc', '10/31/2023 14:00:00', 185.25),
+(42,'ALGN', 'Align Technology Inc', '10/31/2023 16:00:00', 184.61),
+(43,'ALGN', 'Align Technology Inc', '10/30/2023 12:00:00', 185.00),
+(44,'ALGN', 'Align Technology Inc', '10/30/2023 14:00:00', 183.26),
+(45,'ALGN', 'Align Technology Inc', '10/30/2023 16:00:00', 186.31), 
+(46,'AMD', 'Advanced Micro Devices Inc', '11/07/2023 14:00:00', 113.69),
+(47,'AMD', 'Advanced Micro Devices Inc', '11/07/2023 16:00:00', 113.48),
+(48,'AMD', 'Advanced Micro Devices Inc', '11/06/2023 12:00:00', 111.54),
+(49,'AMD', 'Advanced Micro Devices Inc', '11/06/2023 14:00:00', 110.61),
+(50,'AMD', 'Advanced Micro Devices Inc', '11/06/2023 16:00:00', 111.76),
+(51,'AMD', 'Advanced Micro Devices Inc', '11/03/2023 12:00:00', 110.71),
+(52,'AMD', 'Advanced Micro Devices Inc', '11/03/2023 14:00:00', 112.40),
+(53,'AMD', 'Advanced Micro Devices Inc', '11/03/2023 16:00:00', 112.26),
+(54,'AMD', 'Advanced Micro Devices Inc', '11/02/2023 12:00:00', 107.51),
+(55,'AMD', 'Advanced Micro Devices Inc', '11/02/2023 14:00:00', 108.09),
+(56,'AMD', 'Advanced Micro Devices Inc', '11/02/2023 16:00:00', 107.79),
+(57,'AMD', 'Advanced Micro Devices Inc', '11/01/2023 12:00:00', 106.04),
+(58,'AMD', 'Advanced Micro Devices Inc', '11/01/2023 14:00:00', 106.74),
+(59,'AMD', 'Advanced Micro Devices Inc', '11/01/2023 16:00:00', 107.99),
+(60,'AMD', 'Advanced Micro Devices Inc', '10/31/2023 12:00:00', 96.78),
+(61,'AMD', 'Advanced Micro Devices Inc', '10/31/2023 14:00:00', 98.08),
+(62,'AMD', 'Advanced Micro Devices Inc', '10/31/2023 16:00:00', 98.60),
+(63,'AMD', 'Advanced Micro Devices Inc', '10/30/2023 12:00:00', 95.77),
+(64,'AMD', 'Advanced Micro Devices Inc', '10/30/2023 14:00:00', 96.19),
+(65,'AMD', 'Advanced Micro Devices Inc', '10/30/2023 16:00:00', 96.15),
+(66,'CEG', 'Constellation Energy Corp', '11/07/2023 14:00:00', 119.60),
+(67,'CEG', 'Constellation Energy Corp', '11/07/2023 16:00:00', 119.89),
+(68,'CEG', 'Constellation Energy Corp', '11/06/2023 12:00:00', 125.00),
+(69,'CEG', 'Constellation Energy Corp', '11/06/2023 14:00:00', 124.12),
+(70,'CEG', 'Constellation Energy Corp', '11/06/2023 16:00:00', 124.77),
+(71,'CEG', 'Constellation Energy Corp', '11/03/2023 12:00:00', 118.19),
+(72,'CEG', 'Constellation Energy Corp', '11/03/2023 14:00:00', 117.93),
+(73,'CEG', 'Constellation Energy Corp', '11/03/2023 16:00:00', 117.07),
+(74,'CEG', 'Constellation Energy Corp', '11/02/2023 12:00:00', 117.00),
+(75,'CEG', 'Constellation Energy Corp', '11/02/2023 14:00:00', 117.59),
+(76,'CEG', 'Constellation Energy Corp', '11/02/2023 16:00:00', 117.29),
+(77,'CEG', 'Constellation Energy Corp', '11/01/2023 12:00:00', 114.76),
+(78,'CEG', 'Constellation Energy Corp', '11/01/2023 14:00:00', 114.23),
+(79,'CEG', 'Constellation Energy Corp', '11/01/2023 16:00:00', 114.85),
+(80,'CEG', 'Constellation Energy Corp', '10/31/2023 12:00:00', 112.09),
+(81,'CEG', 'Constellation Energy Corp', '10/31/2023 14:00:00', 113.04),
+(82,'CEG', 'Constellation Energy Corp', '10/31/2023 16:00:00', 112.92),
+(83,'CEG', 'Constellation Energy Corp', '10/30/2023 12:00:00', 111.93),
+(84,'CEG', 'Constellation Energy Corp', '10/30/2023 14:00:00', 112.59),
+(85,'CEG', 'Constellation Energy Corp', '10/30/2023 16:00:00', 111.85),
+(86,'AMZN', 'Amazon.com Inc', '11/07/2023 14:00:00', 143.02),
+(87,'AMZN', 'Amazon.com Inc', '11/07/2023 16:00:00', 142.79),
+(88,'AMZN', 'Amazon.com Inc', '11/06/2023 12:00:00', 139.99),
+(89,'AMZN', 'Amazon.com Inc', '11/06/2023 14:00:00', 139.25),
+(90,'AMZN', 'Amazon.com Inc', '11/06/2023 16:00:00', 139.67),
+(91,'AMZN', 'Amazon.com Inc', '11/03/2023 12:00:00', 138.27),
+(92,'AMZN', 'Amazon.com Inc', '11/03/2023 14:00:00', 138.97),
+(93,'AMZN', 'Amazon.com Inc', '11/03/2023 16:00:00', 138.58),
+(94,'AMZN', 'Amazon.com Inc', '11/02/2023 12:00:00', 136.91),
+(95,'AMZN', 'Amazon.com Inc', '11/02/2023 14:00:00', 137.58),
+(96,'AMZN', 'Amazon.com Inc', '11/02/2023 16:00:00', 138.08),
+(97,'AMZN', 'Amazon.com Inc', '11/01/2023 12:00:00', 135.43),
+(98,'AMZN', 'Amazon.com Inc', '11/01/2023 14:00:00', 135.79),
+(99,'AMZN', 'Amazon.com Inc', '11/01/2023 16:00:00', 137.02),
+(100,'AMZN', 'Amazon.com Inc', '10/31/2023 12:00:00', 132.04),
+(101,'AMZN', 'Amazon.com Inc', '10/31/2023 14:00:00', 132.96),
+(102,'AMZN', 'Amazon.com Inc', '10/31/2023 16:00:00', 133.00),
+(103,'AMZN', 'Amazon.com Inc', '10/30/2023 12:00:00', 132.09),
+(104,'AMZN', 'Amazon.com Inc', '10/30/2023 14:00:00', 132.66),
+(105,'AMZN', 'Amazon.com Inc', '10/30/2023 16:00:00', 132.72);
+
+select * from stock order by symbol, date;
+
+/*What are the distinct stocks in the table?*/
+select distinct symbol
+from stock;
+
+/*Query all data for a single stock. Do you notice any overall trends?*/
+select * 
+from stock 
+where symbol = 'ABNB';
+
+select * 
+from stock 
+where symbol = 'ALGN';
+
+select * 
+from stock 
+where symbol = 'CEG';
+
+select * 
+from stock 
+where symbol = 'AMZN';
+
+/*Which rows have a price above 100? between 40 to 50, etc?*/
+select *
+from stock
+where price > 100
+order by date;
+
+select *
+from stock
+where price between 100 and 125
+order by date;
+
+/*Sort the table by price. What are the minimum and maximum prices?*/
+select symbol, name, max(price) as max_price, min(price) as min_price
+from stock
+group by name;
+
+/*Explore using aggregate functions to look at key statistics about the data (e.g., min, max, average).*/
+select round(avg(price),2) as 'weekly_stock_avg_price'
+from stock;
+
+select symbol, name, avg (price)
+from stock
+group by name;
+
+/*Group the data by stock and repeat. How do the stocks compare to each other?*/
+select symbol, name, SUM(price), min(price), max(price), round(avg(price),2) as 'avg_price', round((max(price)-min(price)),2) as 'price_range'
+from stock
+group by name;
+
+/*Group the data by day or hour of day. Does day of week or time of day impact prices?*/
+select symbol, name, date, SUM(price)
+from stock
+where date like '%16:00%'
+group by name 
+order by date;
+
+/*Which of the rows have a price greater than the average of all prices in the dataset?*/
+select *
+from stock
+where price > (select AVG (price) from stock)
+order by symbol;
+
+/*ADVANCED CHALLENGES*/
+/*In addition to the built-in aggregate functions, explore ways to calculate other key statistics about the data, such as the median or variance.*/
+select symbol, name, price
+from stock
+order by price
+limit 1
+offset (select count(*) from stock)/2;
+
+/*Let’s refactor the data into 2 tables - stock_info to store general info about the stock itself (ie. symbol, name) and stock_prices to store the collected data on price (ie. symbol, datetime, price).*/
+create table stock_info as 
+select id, symbol, name from stock;
+
+create table stock_price as
+select id, symbol, price, date from stock;
+
+select *
+from stock_info
+join stock_price
+on stock_info.id = stock_price.id
+limit 10;
+
+/*Add more variables to the stock_info table and update the data (e.g., sector, industry, etc).*/
+select *,
+case 
+when symbol = 'ABNB' then 'Tourism'
+when symbol = 'ALGN' then 'Technology'
+when symbol = 'AMD' then 'Industry'
+when symbol = 'CEG' then 'Technology'
+when symbol = 'AMZN' then 'Technology'
+else 'Other'
+end as 'Sector'
+from stock_info;
